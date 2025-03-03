@@ -1,0 +1,251 @@
+.studentDashboard {
+    padding: 20px;
+  }
+  .navTitle{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    margin-bottom: 30px;
+  }
+  .navbar {
+    border-radius: 10px;
+    background: linear-gradient(to right, #d69af1, #69eab8);
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .navbar ul li {
+ 
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 18px;
+    background-color: rgb(118, 113, 254);
+    border-radius: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .navbar ul li:hover,
+  .navbar ul li.active {
+    color: #000000;
+    text-decoration: underline;
+  }
+  
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .lessonCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  h5{
+    font-size: 30px;
+    margin-left: 40%;
+    font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    color: #f7cc7e;
+    margin-bottom: 10px;
+  }
+  
+  .lessonCard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .lessonCard:hover {
+    transform: translateY(-5px);
+  }
+  .button{
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+  }
+  .lessonCard .button{
+    background-color: #003cff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer
+  }
+  .buttonContainer .button {
+    display: flex;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 40%;
+  }
+  
+  .button:hover {
+    background-color: #00e60c;
+  }
+  
+  .questionCard {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .questionText {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .optionsContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option {
+    margin-bottom: 8px;
+  }
+  
+  .buttonContainer {
+    margin-top: 20px;
+  }
+  
+  .input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 40%;
+  }
+  
+  
+  .resultsSection {
+    margin-top: 30px;
+  }
+  
+  .resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    min-width: 400px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .resultsTable thead {
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .resultsTable th, .resultsTable td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+  }
+  
+  .resultsTable tbody tr {
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.2s ease;
+  }
+  
+  .resultsTable tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .resultsTable tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .resultsTable td {
+    color: #333;
+  }
+  
+  /* Responsive behavior */
+  @media (max-width: 768px) {
+    .resultsTable, .resultsTable thead, .resultsTable tbody, .resultsTable th, .resultsTable td, .resultsTable tr {
+      display: block;
+    }
+  
+    .resultsTable thead {
+      display: none;
+    }
+  
+    .resultsTable tr {
+      margin-bottom: 15px;
+    }
+  
+    .resultsTable td {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    .resultsTable td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+  
+  .alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #ddff00;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  .correct {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .wrong {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .selectedOption {
+    background-color: #f0f0f0;
+  }
+  .optionsContainer{
+    margin-left: 5px;
+    font-weight: bold;
+  }
+ 
